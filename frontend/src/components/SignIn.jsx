@@ -19,7 +19,7 @@ export default function SignIn() {
 		setIsLoading(true);
 		try {
 			await axios
-				.post("http://localhost:5000/signin", form)
+				.post("https://one-jc5d.onrender.com/signin", form)
 				.then((res) => {
 					if (res.data === "loginpass") {
 						Cookies.set("regIdNo", form.regIdNo, { expires: 7 });
