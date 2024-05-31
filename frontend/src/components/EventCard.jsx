@@ -19,7 +19,7 @@ export default function EventCard({
 	const deleteEvent = async () => {
 		try {
 			await axios
-				.post("http://localhost:5000/delete-event", {
+				.post("https://one-jc5d.onrender.com/delete-event", {
 					id,
 				})
 				.then((res) => {

@@ -75,7 +75,7 @@ export default function Home() {
 	const getEventData = async () => {
 		try {
 			await axios
-				.get("http://localhost:5000/get-eventInfo")
+				.get("https://one-jc5d.onrender.com/get-eventInfo")
 				.then((res) => {
 					if (res.data === "nothing") setShowCard(false);
 					else {
@@ -93,7 +93,7 @@ export default function Home() {
 	const sumbitDiscuss = async () => {
 		try {
 			await axios
-				.post("http://localhost:5000/postDiscuss", {
+				.post("https://one-jc5d.onrender.com/postDiscuss", {
 					cookieVal,
 					discussMsg,
 				})
@@ -116,7 +116,7 @@ export default function Home() {
 	const getDiscussion = async () => {
 		try {
 			await axios
-				.get("http://localhost:5000/get-discussion-data")
+				.get("https://one-jc5d.onrender.com/get-discussion-data")
 				.then((res) => {
 					if (res.data === "fail") {
 						setShowDiscussion(false);
@@ -136,7 +136,7 @@ export default function Home() {
 		getEventData();
 		getDiscussion();
 	}, [cookieVal]);
-	
+
 	useEffect(() => {
 		getDiscussion();
 	}, [replyInput]);

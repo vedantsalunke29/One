@@ -10,12 +10,6 @@ import Foot from "./Foot";
 import {
 	ScrollContainer,
 	ScrollPage,
-	Animator,
-	batch,
-	Fade,
-	ZoomIn,
-	FadeIn,
-	MoveIn,
 } from "react-scroll-motion";
 
 export default function Buysell() {
